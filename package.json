@@ -1,0 +1,32 @@
+{
+  "name": "foster-docs",
+  "version": "0.1.0",
+  "description": "Foster Docs application",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -w",
+    "start": "live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeNetIO/foster-docs.git"
+  },
+  "keywords": [],
+  "author": "Darin Hoover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeNetIO/foster-docs/issues"
+  },
+  "homepage": "https://github.com/CodeNetIO/foster-docs#readme",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.46",
+    "es6-shim": "^0.33.13",
+    "systemjs": "0.19.6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.9.2",
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}
