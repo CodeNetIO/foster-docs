@@ -7,8 +7,6 @@ import {bootstrap, Component} from 'angular2/angular2';
         <h1>Foster Docs!</h1>
         `
 })
-class FosterDocs { 
-    
-}
+class FosterDocs { }
 
 bootstrap(FosterDocs);
