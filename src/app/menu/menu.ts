@@ -1,16 +1,19 @@
 /// <reference path="../../../typings/app.d.ts" />
-import {Component, View} from 'angular2/angular2';
-import {MenuItemComponent} from './menuItem/menuItem.ts';
+import {Component, View, NgFor} from 'angular2/angular2';
+import {MenuItem, MenuItemComponent} from './menuItem/menuItem';
 
 @Component({
 	selector: 'menu',
-	inputs: ['menuItems']
+	inputs: ['items']
 })
 @View({
-	directives: [MenuItemComponent],
+	directives: [MenuItemComponent, NgFor],
 	template: `
+	<ul>
+		<menu-item *ng-for="#item of items" [item]="item"></menu-item>
+	</ul>
 	`
 })
-class Menu {
-	menuItems: Array<MenuItemComponent>;
+export class Menu {
+	menuItems: Array<MenuItem>;
 }

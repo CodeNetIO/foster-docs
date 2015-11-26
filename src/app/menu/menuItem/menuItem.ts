@@ -1,5 +1,18 @@
 import {Component, View} from 'angular2/angular2';
 
-@Component({})
-@View({})
-export class MenuItemComponent {}
+export class MenuItem {
+	title: string;
+}
+
+@Component({
+	selector: 'menu-item',
+	inputs: ['item']
+})
+@View({
+	template: `
+	<li>{{item.title}}</li>
+	`
+})
+export class MenuItemComponent {
+	item: MenuItem;
+}
