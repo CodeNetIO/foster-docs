@@ -1,14 +1,14 @@
-import {bootstrap, Component} from 'angular2/angular2';
+import {bootstrap, Component, View} from 'angular2/angular2';
 
 @Component({
-    selector: 'foster-docs',
-    styleUrls: [],
-    template: `
-        <h1>Foster Docs!</h1>
-        `
+	selector: 'foster-docs'
 })
-class FosterDocs { 
-    
-}
+@View({
+	directives: [],
+	template: `
+	<menu></menu>
+	`
+})
+class FosterDocsApp { }
 
-bootstrap(FosterDocs);
+bootstrap(FosterDocsApp);

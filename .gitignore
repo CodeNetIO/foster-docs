@@ -194,3 +194,15 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+# Project Specific Files and Folders
+!tools/typings
+tools/typings/*
+!tools/typings/tsd.d.ts
+!tools/typings/typescriptApp.d.ts
+**/bower_packages
+
+# all generated JS
+src/js
+src/app/**/*.js
+src/app/**/*.js.map
