@@ -1,6 +1,7 @@
 import {bootstrap, Component, View} from 'angular2/angular2';
 import {Menu} from './menu/menu';
 import {MenuItem} from './menu/menuItem/menuItem';
+
 @Component({
 	selector: 'foster-docs'
 })
@@ -21,5 +22,4 @@ class FosterDocsApp {
 		];
 	}
 }
-
 bootstrap(FosterDocsApp);
