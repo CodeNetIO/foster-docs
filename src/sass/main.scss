@@ -1,0 +1,64 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #3e8bd8;
+$secondary-color: #d83e8b;
+$tertiary-color: #8bd83e;
+$light-gray: #eee;
+$white: #fdfdfd;
+$black: #111;
+$dark-gray: #333;
+
+$link-color: $primary-color;
+$link-hover-color: $secondary-color;
+
+
+/** Global Settings **/
+
+* {
+	font-family: $font-stack;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	background-color: $white;
+}
+
+/** Foster Docs App **/
+foster-docs {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+/** Menu **/
+.menu-container {
+	background-color: $light-gray;
+	width: 100%;
+	line-height: 40px;
+	padding-left: 10px;
+	
+	logo {
+		font-size: 20px;
+		color: $dark-gray;
+		display: inline;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: auto;
+		display: inline;
+		
+		li {
+			padding: 0 10px;
+			display: inline-block;
+			
+			a {
+				text-decoration: none;
+				color: $link-color;
+			}
+			
+			a:hover {
+				color: $link-hover-color;
+			}
+		}
+	}
+}

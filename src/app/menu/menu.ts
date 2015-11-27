@@ -9,9 +9,14 @@ import {MenuItem, MenuItemComponent} from './menuItem/menuItem';
 @View({
 	directives: [MenuItemComponent, NgFor],
 	template: `
-	<ul>
-		<menu-item *ng-for="#item of items" [item]="item"></menu-item>
-	</ul>
+	<div class="menu-container">
+	    <logo>Foster Docs</logo>
+		<ul>
+			<li *ng-for="#item of items">
+				<menu-item [item]="item"></menu-item>
+			</li>
+		</ul>
+	</div>
 	`
 })
 export class Menu {

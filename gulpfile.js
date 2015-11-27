@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     debug = require('gulp-debug'),
     inject = require('gulp-inject'),
+    sass = require('gulp-sass'),
     tsc = require('gulp-typescript'),
     tslint = require('gulp-tslint'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -37,7 +38,7 @@ gulp.task('ts-lint', function () {
 });
 
 /**
- * Compile TypeScript and include references to library and app .d.ts files.
+ * Compile TypeScript and include references to library and app.d.ts files.
  */
 gulp.task('compile-ts', function () {
     var sourceTsFiles = [config.allTypeScript,                //path to typescript files
@@ -68,11 +69,21 @@ gulp.task('clean-ts', function (cb) {
   del(typeScriptGenFiles, cb);
 });
 
-gulp.task('watch', function() {
-    gulp.watch([config.allTypeScript], ['ts-lint', 'compile-ts']);
+/**
+ * Compile Scss
+ */
+gulp.task('compile-sass', function() {
+    gulp.src(config.allScss)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(config.scssOutputPath));
 });
 
-gulp.task('serve', ['compile-ts', 'watch'], function() {
+gulp.task('watch', function() {
+    gulp.watch([config.allTypeScript], ['ts-lint', 'compile-ts']);
+    gulp.watch([config.allScss], ['compile-sass'])
+});
+
+gulp.task('serve', ['compile-ts', 'compile-sass', 'watch'], function() {
     process.stdout.write('Copying libraries...\n');
     gulp.src([
         'node_modules/es6-shim/es6-shim.js',
@@ -98,4 +109,4 @@ gulp.task('serve', ['compile-ts', 'watch'], function() {
     });
 });
 
-gulp.task('default', ['ts-lint', 'gen-ts-refs', 'compile-ts']);
+gulp.task('default', ['ts-lint', 'gen-ts-refs', 'compile-ts', 'compile-sass']);

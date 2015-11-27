@@ -11,7 +11,7 @@ export class MenuItem {
 })
 @View({
 	template: `
-	<li>{{item.title}}</li>
+	<a href="#">{{item.title}}</a>
 	`
 })
 export class MenuItemComponent {
