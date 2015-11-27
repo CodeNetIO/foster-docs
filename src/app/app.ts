@@ -16,9 +16,9 @@ class FosterDocsApp {
 
 	constructor() {
 		this.items = [
-			{'title': 'Item 1'},
-			{'title': 'Item 2'},
-			{'title': 'Item 3'}
+			{'title': 'Item 1', 'selected': false},
+			{'title': 'Item 2', 'selected': false},
+			{'title': 'Item 3', 'selected': false}
 		];
 	}
 }

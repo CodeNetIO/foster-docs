@@ -73,21 +73,29 @@ gulp.task('watch', function() {
 });
 
 gulp.task('serve', ['compile-ts', 'watch'], function() {
-  process.stdout.write('Starting browserSync and superstatic...\n');
-  browserSync({
-    port: 3000,
-    files: ['index.html', '**/*.js'],
-    injectChanges: true,
-    logFileChanges: false,
-    logLevel: 'silent',
-    logPrefix: 'angularin20typescript',
-    notify: true,
-    reloadDelay: 0,
-    server: {
-      baseDir: './src',
-      middleware: superstatic({ debug: false})
-    }
-  });
+    process.stdout.write('Copying libraries...\n');
+    gulp.src([
+        'node_modules/es6-shim/es6-shim.js',
+		'node_modules/systemjs/dist/system.src.js',
+		'node_modules/angular2/bundles/angular2.dev.js'
+    ])
+    .pipe(gulp.dest('src/lib/'));
+    
+    process.stdout.write('Starting browserSync and superstatic...\n');
+    browserSync({
+        port: 3000,
+        files: ['index.html', '**/*.js'],
+        injectChanges: true,
+        logFileChanges: false,
+        logLevel: 'silent',
+        logPrefix: 'foster-docs',
+        notify: true,
+        reloadDelay: 0,
+        server: {
+        baseDir: './src',
+        middleware: superstatic({ debug: false})
+        }
+    });
 });
 
 gulp.task('default', ['ts-lint', 'gen-ts-refs', 'compile-ts']);
