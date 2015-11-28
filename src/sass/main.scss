@@ -69,3 +69,32 @@ status-bar {
 	position: absolute;
 	bottom:0px;
 }
+
+/** Dashboard **/
+dashboard {
+	display: block;
+	width: 960px;
+	margin: 10px auto;
+	height: 100%;
+	padding: 10px;
+	background-color: $light-gray;
+}
+
+.dashboard-widget {
+	padding: 5px;
+	background-color: $secondary-color;
+}
+
+
+/** Common **/
+.table {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell
+}
+
+.table-row {
+	display: table-row;
+}

@@ -1,25 +1,28 @@
 import {bootstrap, Component, View} from 'angular2/angular2';
-import {Menu} from './menu/menu';
+import {MenuComponent} from './menu/menu';
+import {DashboardComponent} from './dashboard/dashboard';
 import {MenuItem} from './model/menuItem';
 
 @Component({
 	selector: 'foster-docs'
 })
 @View({
-	directives: [Menu],
+	directives: [MenuComponent, DashboardComponent],
 	template: `
-	<menu [items]="items"></menu>
+	<menu [items]="menuitems"></menu>
+	<dashboard></dashboard>
 	<status-bar></status-bar>
 	`
 })
 class FosterDocsApp {
-	items: Array<MenuItem>;
+	menuitems: Array<MenuItem>;
 
 	constructor() {
-		this.items = [
-			{'title': 'New', 'selected': false},
+		this.menuitems = [
+			{'title': 'Dashboard', 'selected': false},
 			{'title': 'Tasks', 'selected': false},
-			{'title': 'Documents', 'selected': false}
+			{'title': 'Documents', 'selected': false},
+			{'title': 'Calendar', 'selected': false}
 		];
 	}
 }

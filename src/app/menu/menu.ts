@@ -20,6 +20,6 @@ import { MenuItem } from '../model/menuItem';
 	</div>
 	`
 })
-export class Menu {
+export class MenuComponent {
 	menuItems: Array<MenuItem>;
 }
