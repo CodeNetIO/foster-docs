@@ -1,9 +1,5 @@
 import {Component, View} from 'angular2/angular2';
-
-export class MenuItem {
-	title: string;
-	selected: boolean;
-}
+import { MenuItem } from '../../model/menuItem';
 
 @Component({
 	selector: 'menu-item',

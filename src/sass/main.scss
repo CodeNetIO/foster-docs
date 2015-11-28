@@ -44,7 +44,6 @@ foster-docs {
 	
 	ul {
 		list-style-type: none;
-		margin: auto;
 		display: inline;
 		
 		li {
@@ -61,4 +60,12 @@ foster-docs {
 			}
 		}
 	}
+}
+
+/** Status Bar **/
+status-bar {
+	height: 20px;
+	background-color: $light-gray;
+	position: absolute;
+	bottom:0px;
 }

@@ -1,6 +1,7 @@
 /// <reference path="../../../typings/app.d.ts" />
-import {Component, View, NgFor} from 'angular2/angular2';
-import {MenuItem, MenuItemComponent} from './menuItem/menuItem';
+import { Component, View, NgFor } from 'angular2/angular2';
+import { MenuItemComponent } from './menuItem/menuItem';
+import { MenuItem } from '../model/menuItem';
 
 @Component({
 	selector: 'menu',
