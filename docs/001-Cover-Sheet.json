@@ -1,0 +1,47 @@
+{
+	"fields": {
+		"Name" : "string",
+		"DOB" : "Date",
+		"Age" : "number",
+		"Sex" : "enum",
+		"DateOfPlacement" : "Date",
+		"Placing DHS SW" : {
+			"Name" : "string",
+			"PhoneNumber" : "string"
+		},
+		"Foster Family Home": {
+			"Name" : "string",
+			"PhoneNumber" : "string",
+			"Address" : "string"
+		},
+		"OriginalPlacementDate" : "Date",
+		"DateCreated" : "Date",
+		"FormsNeededInHomeFile" : [
+			"Picture Face Sheet (front cover)",
+			"Authority to Consent to treat (medical consent)",
+			"Personal Rights Form (intake)",
+			"Permission Form (intake)",
+			"Birth Certificate (intake)",
+			"Monthly Progress (monthly reports)",
+			"Appraisal/Needs & Services Plan",
+			"Health Care Visit Form (medical)",
+			"Medication Record (medical)",
+			"Dental Exam Form (medical)",
+			"Report Cards (school)",
+			"Clothing & Personal Property Inventory Form (misc)",
+			"Letters (misc)",
+			"Ombudsman Form (front inside)",
+			"KBYH FP Agreement (intake)",
+			"ID & Emergency info (intake)",
+			"Assessment info (intake)",
+			"SS Card (intake)",
+			"Safeguard for Cash (financial)",
+			"Progress Notes",
+			"Over-the-Counter Medication (medical)",
+			"Immunization Record (medical)",
+			"Copy of Medi-Cal Card (medical)",
+			"IEP info (school)"
+		]
+		
+	}
+}

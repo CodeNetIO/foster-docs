@@ -1,0 +1,28 @@
+{
+	"title" : "Foster Youth Rights",
+	"content" : [
+		"YOU have RIGHTS too!"
+	],
+	"sections" : [
+		{
+			"title" : "YOU HAVE THE RIGHT TO LIVE IN A SAFE, COMFORTABLE HOME WITH:",
+			"content" : [
+				"enough clothes and health food",
+				"your own place to store your things",
+				"an allowance (if you are in a group home)",
+				"a phone that you can use to make confidential calls (unless a judge says you cannot)"
+			]
+		},
+		{
+			"title" : "YOU HAVE THE RIGHT TO:",
+			"content" : [
+				"be treated with respect",
+				"go to religious services and activities of your choice",
+				"send and get unopened mail (unless a judge says someone else can open your mail)",
+				"contact people who are not in the foster care system (like friends, church members, teachers, and others)",
+				"make contact with social workers, attorneys, probation officers, CASAs, foster youth advocates and supporters, or anyone else involved with your case",
+				"be told about your placement by your social worker or probation officer"
+			]
+		}
+	]
+}

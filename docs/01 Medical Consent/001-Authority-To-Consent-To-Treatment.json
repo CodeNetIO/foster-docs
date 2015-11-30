@@ -1,0 +1,29 @@
+{
+	"title" : "AUTHORITY TO CONSENT TO TREATMENT",
+	"fields" : {
+		"countyDepartmentOfHumanServices" : "string",
+		"fosterParents" : {
+			"name" : "string",
+			"licenseNumber" : "string"
+		},
+		"state" : "string",
+		"fosterChild" : {
+			"name" : "string",
+			"dob" : "Date",
+			"ssn" : "string"
+		},
+		"healthAndSafetyCode" : "string"
+		
+	},	
+	"content" : [
+		"I, the undersigned authorized representative of the {fields.countyDepartmentOfHumanServices}, ",
+		"certify as follows. {fields.fosterParents.name} License # {fields.fosterParents.licenseNumber}",
+		"is/are license by the State of {fields.state} to provide Residential Foster Care and is/are ",
+		"providing residential foster for the following child: Name: {fields.fosterChild.name}, DOB: ",
+		"{fields.fosterChild.dob} SSN: {fields.fosterChild.ssn} pursuant to the order of the Juvenile ",
+		"Court.  Therefore, pursuant to Health and Safety Code Section {fields.healthAndSafetyCode}, ",
+		"the above named licensed caregiver(s) is/are authorized to consent to routine medical and ",
+		"dental treatment including, but not limited to immunizations, physical examination, and ",
+		"x-rays on behalf of the child. "
+	]
+}
