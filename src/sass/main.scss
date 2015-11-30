@@ -1,14 +1,22 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #3e8bd8;
-$secondary-color: #d83e8b;
-$tertiary-color: #8bd83e;
+// put all this stuff in a "core" css and import it into each one separately.
+// then separate each file into its own component sass file.
+// Font
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+$font-stack: Open Sans, Helvetica, sans-serif;
+$color-1: #9fc5e0;
+$color-2: #e09fc5;
+$color-3: #c5e09f;
+$color-4: #e0c79f;
+$color-5: #9fe0da;
 $light-gray: #eee;
 $white: #fdfdfd;
+$super-white: #fff;
 $black: #111;
+$super-black: #000;
 $dark-gray: #333;
 
-$link-color: $primary-color;
-$link-hover-color: $secondary-color;
+$link-color: $white;
 
 
 /** Global Settings **/
@@ -31,15 +39,31 @@ foster-docs {
 
 /** Menu **/
 .menu-container {
-	background-color: $light-gray;
+	background-color: $color-1;
 	width: 100%;
 	line-height: 40px;
 	padding-left: 10px;
 	
 	logo {
 		font-size: 20px;
-		color: $dark-gray;
-		display: inline;
+		color: $white;
+		display: inline-block;
+		margin: 0 30px;
+		
+		a {
+			color: $white;
+			display: block;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			color: $dark-gray;
+			-webkit-transition: background-color 150ms linear;
+			-moz-transition: background-color 150ms linear;
+			-o-transition: background-color 150ms linear;
+			-ms-transition: background-color 150ms linear;
+			transition: background-color 150ms linear;
+		}
 	}
 	
 	ul {
@@ -47,16 +71,24 @@ foster-docs {
 		display: inline;
 		
 		li {
-			padding: 0 10px;
 			display: inline-block;
 			
 			a {
 				text-decoration: none;
 				color: $link-color;
+				display: block;
+				padding: 3px 5px 0px 5px;
+				margin: 0 4px;
+				border-bottom: 3px solid transparent;
 			}
 			
 			a:hover {
-				color: $link-hover-color;
+				border-bottom: 3px solid $color-2;
+				-webkit-transition: background-color 150ms linear;
+				-moz-transition: background-color 150ms linear;
+				-o-transition: background-color 150ms linear;
+				-ms-transition: background-color 150ms linear;
+				transition: background-color 150ms linear;
 			}
 		}
 	}
@@ -82,7 +114,7 @@ dashboard {
 
 .dashboard-widget {
 	padding: 5px;
-	background-color: $secondary-color;
+	background-color: $color-2;
 }
 
 

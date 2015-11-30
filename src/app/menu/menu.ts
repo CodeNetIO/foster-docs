@@ -11,7 +11,7 @@ import { MenuItem } from '../model/menuItem';
 	directives: [MenuItemComponent, NgFor],
 	template: `
 	<div class="menu-container">
-	    <logo>Foster Docs</logo>
+	    <logo><a href="#">Foster Docs</a></logo>
 		<ul>
 			<li *ng-for="#item of items">
 				<menu-item [item]="item"></menu-item>
