@@ -1,0 +1,18 @@
+{
+  "name": "foster-docs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/CodeNetIO/foster-docs",
+  "authors": [
+    "darinh <darin@codenet.io>"
+  ],
+  "description": "Foster Docs app",
+  "main": "src/index.html",
+  "license": "None",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
