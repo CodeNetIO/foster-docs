@@ -4,9 +4,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 $font-stack: Open Sans, Helvetica, sans-serif;
-$color-1: #9fc5e0;
-$color-2: #e09fc5;
-$color-3: #c5e09f;
+$color-1: #0072ff; //#304352;
+$color-2: #ff0084; //#E55D87;
+$color-3: #43cea2;
 $color-4: #e0c79f;
 $color-5: #9fe0da;
 $light-gray: #eee;
@@ -16,7 +16,7 @@ $black: #111;
 $super-black: #000;
 $dark-gray: #333;
 
-$link-color: $white;
+$link-color: $color-1;
 
 
 /** Global Settings **/
@@ -39,19 +39,19 @@ foster-docs {
 
 /** Menu **/
 .menu-container {
-	background-color: $color-1;
+	background-color: $white;
 	width: 100%;
 	line-height: 40px;
 	padding-left: 10px;
 	
 	logo {
 		font-size: 20px;
-		color: $white;
+		color: $color-1;
 		display: inline-block;
 		margin: 0 30px;
 		
 		a {
-			color: $white;
+			color: $color-1;
 			display: block;
 			text-decoration: none;
 		}
@@ -114,7 +114,7 @@ dashboard {
 
 .dashboard-widget {
 	padding: 5px;
-	background-color: $color-2;
+	background-color: $color-3;
 }
 
 
